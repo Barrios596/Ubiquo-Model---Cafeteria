@@ -19,7 +19,7 @@ public class Cliente {
     }
 
     public void agregarMetodoDePago(String numero, Date vencimiento) {
-
+        this.tarjetas.add(new Tarjeta(numero, vencimiento));
     }
 
     public void cambiarNombre(String nuevoNombre) {

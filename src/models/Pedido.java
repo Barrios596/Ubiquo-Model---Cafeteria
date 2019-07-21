@@ -27,6 +27,10 @@ class Pedido {
         this.ubicacion = ubicacion;
     }
 
+    void definirMetodoDePago(Tarjeta tarjeta) {
+        this.metodoDePago = tarjeta;
+    }
+
     int costoTotal() {
         int total = 0;
         for (Item item : items) {
