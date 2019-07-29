@@ -9,9 +9,10 @@ public class Cliente {
     private String nombre;
     private Pedido pedidoActual;
     private ArrayList<Tarjeta> tarjetas;
+    private int numeroDeUsuarios;
 
     public Cliente(String email, String nombre) {
-        this.id = Administrador().siguienteId;
+        this.id = Mecanismo().siguienteId;
         this.email = email;
         this.nombre = nombre;
         this.pedidoActual = new Pedido();
@@ -35,4 +36,7 @@ public class Cliente {
         this.pedidoActual.eliminarDelPedido(indice);
     }
 
+    public int siguienteId() {
+        return numeroDeUsuarios++;
+    }
 }
